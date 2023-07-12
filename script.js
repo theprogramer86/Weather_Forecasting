@@ -36,6 +36,9 @@ let updatedWeather = (info) => {
 
         //  access the icon according to weather from the API data
         document.getElementById("weather-image" + (i+1)).src = "https://www.weatherbit.io/static/img/icons/" + info.data[i].weather.icon + ".png"
+        
+        // access the description of weather from the data of API
+        document.getElementById("img-description" + (i+1)).textContent = info.data[i].weather.description
     }
 }
 
