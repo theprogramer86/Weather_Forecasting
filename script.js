@@ -17,7 +17,6 @@ search.addEventListener('keydown', async (e) => {
         let weather = await weatherByCity(search.value);
         updatedWeather(weather);
         currentDay();
-        console.log(weather);
     }
 })
 
