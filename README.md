@@ -1,4 +1,4 @@
-# Weather_Forecasting
+# Weather_Forecasting using WEATHERBIT API
 
 A weather forecasting web application is an online tool that provides users with information about current weather conditions, as well as predictions for future weather patterns. Users can access this information through a web browser, allowing them to stay updated on weather condition. 
 
