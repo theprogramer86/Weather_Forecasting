@@ -1,5 +1,5 @@
-let search = document.querySelector('.searchBox');
-let searchBtn = document.getElementById('.searchBtn');
+let searchBox = document.querySelector('.searchBox');
+let searchBtn = document.querySelector('.searchBtn');
 let cities = document.querySelector('.weather-city');
 
 let myAPIKey = '7eead1cfbaeb4b61b2d69ec34718ba80';
@@ -12,7 +12,7 @@ let weatherByCity = async (cities) => {
     return weather;
 }
 
-search.addEventListener('keydown', async (e) => {
+searchBox.addEventListener('keydown', async (e) => {
     if (e.keyCode === 13) {
         let weather = await weatherByCity(search.value);
         updatedWeather(weather);
@@ -20,11 +20,16 @@ search.addEventListener('keydown', async (e) => {
     }
 })
 
+searchBtn.addEventListener('click', async () => {
+        let weather = await weatherByCity(search.value);
+        updatedWeather(weather);
+        currentDay();
+})
 
 // // Get the wether details of 5 days from the api
 let updatedWeather = (info) => {
+    // access the city and the country
     cities.textContent = info.city_name + ', ' + info.country_code;
-    
 
     for (i = 0; i < 5; i++) {
 
@@ -43,7 +48,6 @@ let updatedWeather = (info) => {
 }
 
 // For accessing 5 days in a weak
-
 let currentDay = () => {
 
     const d = new Date();
