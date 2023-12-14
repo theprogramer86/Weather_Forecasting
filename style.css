@@ -12,7 +12,7 @@ body{
     justify-content: center;
     min-height: 90vh;
     /* background: #43AFFC; */
-    background: url("/background-image.jpeg");
+    background: url("resources/background-image.jpeg");
     background-size: cover;
 }
 
